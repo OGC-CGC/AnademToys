@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* AnademToysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* AnademToysApp.swift */; };
+		A10000000000000000000002 /* FeatureModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* FeatureModule.swift */; };
+		A10000000000000000000003 /* URLSchemeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* URLSchemeItem.swift */; };
+		A10000000000000000000004 /* URLSchemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* URLSchemeStore.swift */; };
+		A10000000000000000000005 /* URLSchemeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* URLSchemeRepository.swift */; };
+		A10000000000000000000006 /* AppShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000016 /* AppShellView.swift */; };
+		A10000000000000000000007 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000017 /* SidebarView.swift */; };
+		A10000000000000000000008 /* URLSchemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000018 /* URLSchemesView.swift */; };
+		A1000000000000000000000A /* URLSchemeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001A /* URLSchemeRowView.swift */; };
+		A1000000000000000000000B /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001B /* GeneralSettingsView.swift */; };
+		A30000000000000000000001 /* URLHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000011 /* URLHistoryItem.swift */; };
+		A30000000000000000000002 /* URLHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000012 /* URLHistoryStore.swift */; };
+		A30000000000000000000003 /* URLHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000013 /* URLHistoryRepository.swift */; };
+		A30000000000000000000004 /* URLForwardingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000014 /* URLForwardingParser.swift */; };
+		A30000000000000000000005 /* HelperAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000015 /* HelperAppManager.swift */; };
+		A30000000000000000000006 /* URLHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000016 /* URLHistoryRowView.swift */; };
+		A30000000000000000000007 /* URLHistoryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000017 /* URLHistoryEditorView.swift */; };
+		A30000000000000000000008 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000019 /* AppLogger.swift */; };
+		A30000000000000000000009 /* AppRegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3000000000000000000001C /* AppRegistrationManager.swift */; };
+		A3000000000000000000000A /* MainWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3000000000000000000001D /* MainWindowManager.swift */; };
+		A3000000000000000000000B /* MainWindowAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3000000000000000000001E /* MainWindowAccessor.swift */; };
+		A40000000000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000011 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000010 /* AnademToys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnademToys.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000011 /* AnademToysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnademToysApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000012 /* FeatureModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureModule.swift; sourceTree = "<group>"; };
+		A10000000000000000000013 /* URLSchemeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeItem.swift; sourceTree = "<group>"; };
+		A10000000000000000000014 /* URLSchemeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeStore.swift; sourceTree = "<group>"; };
+		A10000000000000000000015 /* URLSchemeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeRepository.swift; sourceTree = "<group>"; };
+		A10000000000000000000016 /* AppShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShellView.swift; sourceTree = "<group>"; };
+		A10000000000000000000017 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		A10000000000000000000018 /* URLSchemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemesView.swift; sourceTree = "<group>"; };
+		A1000000000000000000001A /* URLSchemeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeRowView.swift; sourceTree = "<group>"; };
+		A1000000000000000000001B /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		A30000000000000000000011 /* URLHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHistoryItem.swift; sourceTree = "<group>"; };
+		A30000000000000000000012 /* URLHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHistoryStore.swift; sourceTree = "<group>"; };
+		A30000000000000000000013 /* URLHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHistoryRepository.swift; sourceTree = "<group>"; };
+		A30000000000000000000014 /* URLForwardingParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLForwardingParser.swift; sourceTree = "<group>"; };
+		A30000000000000000000015 /* HelperAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAppManager.swift; sourceTree = "<group>"; };
+		A30000000000000000000016 /* URLHistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHistoryRowView.swift; sourceTree = "<group>"; };
+		A30000000000000000000017 /* URLHistoryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHistoryEditorView.swift; sourceTree = "<group>"; };
+		A30000000000000000000019 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		A3000000000000000000001A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3000000000000000000001C /* AppRegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRegistrationManager.swift; sourceTree = "<group>"; };
+		A3000000000000000000001D /* MainWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowManager.swift; sourceTree = "<group>"; };
+		A3000000000000000000001E /* MainWindowAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowAccessor.swift; sourceTree = "<group>"; };
+		A40000000000000000000011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000030 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000031 /* AnademToys */,
+				A10000000000000000000032 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000031 /* AnademToys */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000011 /* AnademToysApp.swift */,
+				A10000000000000000000033 /* Models */,
+				A10000000000000000000034 /* Storage */,
+				A30000000000000000000018 /* Services */,
+				A10000000000000000000035 /* Shell */,
+				A10000000000000000000036 /* Features */,
+				A10000000000000000000037 /* Settings */,
+				A3000000000000000000001B /* Resources */,
+			);
+			path = AnademToys;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000032 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000010 /* AnademToys.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000033 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000012 /* FeatureModule.swift */,
+				A10000000000000000000013 /* URLSchemeItem.swift */,
+				A10000000000000000000014 /* URLSchemeStore.swift */,
+				A30000000000000000000011 /* URLHistoryItem.swift */,
+				A30000000000000000000012 /* URLHistoryStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000034 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000015 /* URLSchemeRepository.swift */,
+				A30000000000000000000013 /* URLHistoryRepository.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000035 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000016 /* AppShellView.swift */,
+				A10000000000000000000017 /* SidebarView.swift */,
+				A3000000000000000000001E /* MainWindowAccessor.swift */,
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000036 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000038 /* URLSchemes */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000037 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000001B /* GeneralSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000038 /* URLSchemes */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000018 /* URLSchemesView.swift */,
+				A1000000000000000000001A /* URLSchemeRowView.swift */,
+				A30000000000000000000016 /* URLHistoryRowView.swift */,
+				A30000000000000000000017 /* URLHistoryEditorView.swift */,
+			);
+			path = URLSchemes;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000018 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000014 /* URLForwardingParser.swift */,
+				A30000000000000000000015 /* HelperAppManager.swift */,
+				A30000000000000000000019 /* AppLogger.swift */,
+				A3000000000000000000001C /* AppRegistrationManager.swift */,
+				A3000000000000000000001D /* MainWindowManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A3000000000000000000001B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3000000000000000000001A /* Info.plist */,
+				A40000000000000000000011 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000040 /* AnademToys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000070 /* Build configuration list for PBXNativeTarget "AnademToys" */;
+			buildPhases = (
+				A10000000000000000000050 /* Sources */,
+				A10000000000000000000020 /* Frameworks */,
+				A40000000000000000000020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnademToys;
+			productName = AnademToys;
+			productReference = A10000000000000000000010 /* AnademToys.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000060 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					A10000000000000000000040 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000061 /* Build configuration list for PBXProject "AnademToys" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000030;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A10000000000000000000032 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000040 /* AnademToys */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A40000000000000000000020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40000000000000000000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* AnademToysApp.swift in Sources */,
+				A10000000000000000000002 /* FeatureModule.swift in Sources */,
+				A10000000000000000000003 /* URLSchemeItem.swift in Sources */,
+				A10000000000000000000004 /* URLSchemeStore.swift in Sources */,
+				A10000000000000000000005 /* URLSchemeRepository.swift in Sources */,
+				A10000000000000000000006 /* AppShellView.swift in Sources */,
+				A10000000000000000000007 /* SidebarView.swift in Sources */,
+				A10000000000000000000008 /* URLSchemesView.swift in Sources */,
+				A1000000000000000000000A /* URLSchemeRowView.swift in Sources */,
+				A1000000000000000000000B /* GeneralSettingsView.swift in Sources */,
+				A30000000000000000000001 /* URLHistoryItem.swift in Sources */,
+				A30000000000000000000002 /* URLHistoryStore.swift in Sources */,
+				A30000000000000000000003 /* URLHistoryRepository.swift in Sources */,
+				A30000000000000000000004 /* URLForwardingParser.swift in Sources */,
+				A30000000000000000000005 /* HelperAppManager.swift in Sources */,
+				A30000000000000000000006 /* URLHistoryRowView.swift in Sources */,
+				A30000000000000000000007 /* URLHistoryEditorView.swift in Sources */,
+				A30000000000000000000008 /* AppLogger.swift in Sources */,
+				A30000000000000000000009 /* AppRegistrationManager.swift in Sources */,
+				A3000000000000000000000A /* MainWindowManager.swift in Sources */,
+				A3000000000000000000000B /* MainWindowAccessor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10000000000000000000063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A10000000000000000000071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AnademToys/Resources/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anadem.AnademToys;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A10000000000000000000072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AnademToys/Resources/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anadem.AnademToys;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000061 /* Build configuration list for PBXProject "AnademToys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000062 /* Debug */,
+				A10000000000000000000063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000070 /* Build configuration list for PBXNativeTarget "AnademToys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000071 /* Debug */,
+				A10000000000000000000072 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000060 /* Project object */;
+}
