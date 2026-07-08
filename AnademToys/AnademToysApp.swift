@@ -15,6 +15,12 @@ struct AnademToysApp: App {
                     AppRegistrationManager.registerCurrentApp()
                 }
                 .onOpenURL { url in
+                    if url.isFileURL {
+                        NotificationCenter.default.post(name: .archiveOpenRequested, object: url)
+                        MainWindowManager.focusMainWindow()
+                        return
+                    }
+
                     AppLogger.log("Main app received URL: \(url.absoluteString)")
                     guard let urlString = URLForwardingParser.historyURLString(from: url) else {
                         AppLogger.log("Main app ignored URL because it is not a valid helper callback.")
@@ -42,4 +48,5 @@ struct AnademToysApp: App {
 extension Notification.Name {
     static let addURLSchemeRequested = Notification.Name("addURLSchemeRequested")
     static let urlSchemeCaptured = Notification.Name("urlSchemeCaptured")
+    static let archiveOpenRequested = Notification.Name("archiveOpenRequested")
 }

@@ -29,6 +29,13 @@
 		A3000000000000000000000A /* MainWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3000000000000000000001D /* MainWindowManager.swift */; };
 		A3000000000000000000000B /* MainWindowAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3000000000000000000001E /* MainWindowAccessor.swift */; };
 		A40000000000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000011 /* Assets.xcassets */; };
+		A50000000000000000000001 /* ArchiveFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000011 /* ArchiveFormat.swift */; };
+		A50000000000000000000002 /* ArchiveEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000012 /* ArchiveEntry.swift */; };
+		A50000000000000000000003 /* ArchiveReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000013 /* ArchiveReading.swift */; };
+		A50000000000000000000004 /* LibArchiveReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000014 /* LibArchiveReader.swift */; };
+		A50000000000000000000005 /* ArchivePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000015 /* ArchivePreviewViewModel.swift */; };
+		A50000000000000000000006 /* ArchivesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000016 /* ArchivesView.swift */; };
+		A50000000000000000000007 /* ArchiveEntryIconCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5000000000000000000001A /* ArchiveEntryIconCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +63,13 @@
 		A3000000000000000000001D /* MainWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowManager.swift; sourceTree = "<group>"; };
 		A3000000000000000000001E /* MainWindowAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowAccessor.swift; sourceTree = "<group>"; };
 		A40000000000000000000011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A50000000000000000000011 /* ArchiveFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveFormat.swift; sourceTree = "<group>"; };
+		A50000000000000000000012 /* ArchiveEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveEntry.swift; sourceTree = "<group>"; };
+		A50000000000000000000013 /* ArchiveReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveReading.swift; sourceTree = "<group>"; };
+		A50000000000000000000014 /* LibArchiveReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibArchiveReader.swift; sourceTree = "<group>"; };
+		A50000000000000000000015 /* ArchivePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivePreviewViewModel.swift; sourceTree = "<group>"; };
+		A50000000000000000000016 /* ArchivesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesView.swift; sourceTree = "<group>"; };
+		A5000000000000000000001A /* ArchiveEntryIconCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveEntryIconCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000012 /* FeatureModule.swift */,
+				A50000000000000000000017 /* Archives */,
 				A10000000000000000000013 /* URLSchemeItem.swift */,
 				A10000000000000000000014 /* URLSchemeStore.swift */,
 				A30000000000000000000011 /* URLHistoryItem.swift */,
@@ -135,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000038 /* URLSchemes */,
+				A50000000000000000000019 /* Archives */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -166,6 +182,7 @@
 				A30000000000000000000019 /* AppLogger.swift */,
 				A3000000000000000000001C /* AppRegistrationManager.swift */,
 				A3000000000000000000001D /* MainWindowManager.swift */,
+				A50000000000000000000018 /* Archives */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -177,6 +194,34 @@
 				A40000000000000000000011 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000017 /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				A50000000000000000000011 /* ArchiveFormat.swift */,
+				A50000000000000000000012 /* ArchiveEntry.swift */,
+			);
+			path = Archives;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000018 /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				A50000000000000000000013 /* ArchiveReading.swift */,
+				A50000000000000000000014 /* LibArchiveReader.swift */,
+				A5000000000000000000001A /* ArchiveEntryIconCache.swift */,
+			);
+			path = Archives;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000019 /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				A50000000000000000000015 /* ArchivePreviewViewModel.swift */,
+				A50000000000000000000016 /* ArchivesView.swift */,
+			);
+			path = Archives;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +316,13 @@
 				A30000000000000000000009 /* AppRegistrationManager.swift in Sources */,
 				A3000000000000000000000A /* MainWindowManager.swift in Sources */,
 				A3000000000000000000000B /* MainWindowAccessor.swift in Sources */,
+				A50000000000000000000001 /* ArchiveFormat.swift in Sources */,
+				A50000000000000000000002 /* ArchiveEntry.swift in Sources */,
+				A50000000000000000000003 /* ArchiveReading.swift in Sources */,
+				A50000000000000000000004 /* LibArchiveReader.swift in Sources */,
+				A50000000000000000000007 /* ArchiveEntryIconCache.swift in Sources */,
+				A50000000000000000000005 /* ArchivePreviewViewModel.swift in Sources */,
+				A50000000000000000000006 /* ArchivesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

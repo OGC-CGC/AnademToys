@@ -3,6 +3,7 @@ import SwiftUI
 
 enum FeatureModule: String, CaseIterable, Identifiable {
     case urlSchemes
+    case archives
     case generalSettings
     case about
 
@@ -12,6 +13,8 @@ enum FeatureModule: String, CaseIterable, Identifiable {
         switch self {
         case .urlSchemes:
             "URL Scheme"
+        case .archives:
+            "压缩文件"
         case .generalSettings:
             "通用设置"
         case .about:
@@ -23,6 +26,8 @@ enum FeatureModule: String, CaseIterable, Identifiable {
         switch self {
         case .urlSchemes:
             "link"
+        case .archives:
+            "archivebox"
         case .generalSettings:
             "gearshape"
         case .about:

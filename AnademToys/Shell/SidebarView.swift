@@ -6,7 +6,7 @@ struct SidebarView: View {
     var body: some View {
         List(selection: $selectedModule) {
             Section("功能") {
-                ForEach([FeatureModule.urlSchemes]) { module in
+                ForEach([FeatureModule.urlSchemes, .archives]) { module in
                     Label(module.title, systemImage: module.systemImage)
                         .tag(module)
                 }
