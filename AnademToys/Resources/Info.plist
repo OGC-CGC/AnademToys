@@ -23,6 +23,10 @@
 				<string>tar</string>
 				<string>7z</string>
 				<string>apk</string>
+				<string>rar</string>
+				<string>xar</string>
+				<string>cpio</string>
+				<string>cab</string>
 			</array>
 			<key>CFBundleTypeName</key>
 			<string>Archive File</string>

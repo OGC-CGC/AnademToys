@@ -75,7 +75,7 @@ final class ArchivePreviewViewModel: ObservableObject {
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
         panel.canChooseFiles = true
-        panel.message = "选择 zip、tar、7z 或同类容器文件"
+        panel.message = "选择 libarchive 可识别的压缩包或归档镜像文件"
 
         guard panel.runModal() == .OK, let url = panel.url else { return }
         openArchive(url)
@@ -131,7 +131,7 @@ final class ArchivePreviewViewModel: ObservableObject {
             }
         }
 
-        errorMessage = "请拖入 libarchive 可识别的 zip、tar 或 7z 压缩文件。"
+        errorMessage = "请拖入 libarchive 可识别的压缩包或归档镜像文件。"
     }
 
     func enterDirectory(_ entry: ArchiveEntry) {

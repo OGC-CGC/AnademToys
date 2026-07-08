@@ -10,9 +10,14 @@ final class LibArchiveReader: ArchiveReading, @unchecked Sendable {
         static let maximumPathByteCount = 1020
         static let maximumFilenameByteCount = 255
         static let archiveFormatBaseMask: Int32 = 0xFF0000
+        static let archiveFormatCpio: Int32 = 0x10000
         static let archiveFormatTar: Int32 = 0x30000
         static let archiveFormatZip: Int32 = 0x50000
-        static let archiveFormat7Zip: Int32 = 0x70000
+        static let archiveFormatXar: Int32 = 0xA0000
+        static let archiveFormatCab: Int32 = 0xC0000
+        static let archiveFormatRar: Int32 = 0xD0000
+        static let archiveFormat7Zip: Int32 = 0xE0000
+        static let archiveFormatRar5: Int32 = 0x100000
     }
 
     private let library: LibArchiveLibrary
@@ -159,9 +164,22 @@ final class LibArchiveReader: ArchiveReading, @unchecked Sendable {
             throw ArchiveReadError.readFailed(library.errorString(for: archive))
         }
 
-        guard library.archiveReadSupportFormatZip(archive) == Constants.archiveOK,
-              library.archiveReadSupportFormatTar(archive) == Constants.archiveOK,
-              library.archiveReadSupportFormat7Zip(archive) == Constants.archiveOK else {
+        if library.archiveReadSupportFormatAll(archive) == Constants.archiveOK {
+            return
+        }
+
+        let enabledFormatCount = [
+            library.archiveReadSupportFormatZip(archive),
+            library.archiveReadSupportFormatTar(archive),
+            library.archiveReadSupportFormat7Zip(archive),
+            library.archiveReadSupportFormatRar(archive),
+            library.archiveReadSupportFormatRar5(archive),
+            library.archiveReadSupportFormatXar(archive),
+            library.archiveReadSupportFormatCpio(archive),
+            library.archiveReadSupportFormatCab(archive)
+        ].filter { $0 == Constants.archiveOK }.count
+
+        guard enabledFormatCount > 0 else {
             throw ArchiveReadError.readFailed(library.errorString(for: archive))
         }
     }
@@ -169,12 +187,22 @@ final class LibArchiveReader: ArchiveReading, @unchecked Sendable {
     private func detectedFormat(for archive: OpaquePointer) -> ArchiveFormat {
         let formatCode = library.archiveFormat(archive) & Constants.archiveFormatBaseMask
         switch formatCode {
+        case Constants.archiveFormatCpio:
+            return .cpio
         case Constants.archiveFormatZip:
             return .zip
         case Constants.archiveFormatTar:
             return .tar
+        case Constants.archiveFormatXar:
+            return .xar
+        case Constants.archiveFormatCab:
+            return .cab
+        case Constants.archiveFormatRar:
+            return .rar
         case Constants.archiveFormat7Zip:
             return .sevenZip
+        case Constants.archiveFormatRar5:
+            return .rar5
         default:
             break
         }
@@ -191,6 +219,21 @@ final class LibArchiveReader: ArchiveReading, @unchecked Sendable {
         }
         if formatName.contains("7-zip") || formatName.contains("7zip") {
             return .sevenZip
+        }
+        if formatName.contains("rar5") || formatName.contains("rar 5") {
+            return .rar5
+        }
+        if formatName.contains("rar") {
+            return .rar
+        }
+        if formatName.contains("xar") {
+            return .xar
+        }
+        if formatName.contains("cpio") {
+            return .cpio
+        }
+        if formatName.contains("cab") {
+            return .cab
         }
 
         return .unknown
@@ -252,11 +295,17 @@ final class LibArchiveReader: ArchiveReading, @unchecked Sendable {
             throw ArchiveReadError.unsafePath(rawPath)
         }
 
-        let components = trimmedPath.split(separator: "/", omittingEmptySubsequences: true).map(String.init)
-        for component in components {
-            guard component != ".", component != "..", component.utf8.count <= Constants.maximumFilenameByteCount else {
+        var components: [String] = []
+        for component in trimmedPath.split(separator: "/", omittingEmptySubsequences: true).map(String.init) {
+            if component == "." {
+                continue
+            }
+
+            guard component != "..", component.utf8.count <= Constants.maximumFilenameByteCount else {
                 throw ArchiveReadError.unsafePath(rawPath)
             }
+
+            components.append(component)
         }
 
         return components.joined(separator: "/")
@@ -424,9 +473,15 @@ final class LibArchiveLibrary: @unchecked Sendable {
 
     private lazy var readNew: ArchiveReadNew? = symbol("archive_read_new")
     private lazy var readSupportFilterAll: ArchiveReadSupportFilterAll? = symbol("archive_read_support_filter_all")
+    private lazy var readSupportFormatAll: ArchiveReadSupportFormat? = symbol("archive_read_support_format_all")
     private lazy var readSupportFormatZip: ArchiveReadSupportFormat? = symbol("archive_read_support_format_zip")
     private lazy var readSupportFormatTar: ArchiveReadSupportFormat? = symbol("archive_read_support_format_tar")
     private lazy var readSupportFormat7Zip: ArchiveReadSupportFormat? = symbol("archive_read_support_format_7zip")
+    private lazy var readSupportFormatRar: ArchiveReadSupportFormat? = symbol("archive_read_support_format_rar")
+    private lazy var readSupportFormatRar5: ArchiveReadSupportFormat? = symbol("archive_read_support_format_rar5")
+    private lazy var readSupportFormatXar: ArchiveReadSupportFormat? = symbol("archive_read_support_format_xar")
+    private lazy var readSupportFormatCpio: ArchiveReadSupportFormat? = symbol("archive_read_support_format_cpio")
+    private lazy var readSupportFormatCab: ArchiveReadSupportFormat? = symbol("archive_read_support_format_cab")
     private lazy var readOpenFilename: ArchiveReadOpenFilename? = symbol("archive_read_open_filename")
     private lazy var readNextHeader: ArchiveReadNextHeader? = symbol("archive_read_next_header")
     private lazy var readDataSkip: ArchiveReadDataSkip? = symbol("archive_read_data_skip")
@@ -466,6 +521,10 @@ final class LibArchiveLibrary: @unchecked Sendable {
         readSupportFilterAll?(archive) ?? -1
     }
 
+    func archiveReadSupportFormatAll(_ archive: OpaquePointer) -> Int32 {
+        readSupportFormatAll?(archive) ?? -1
+    }
+
     func archiveReadSupportFormatZip(_ archive: OpaquePointer) -> Int32 {
         readSupportFormatZip?(archive) ?? -1
     }
@@ -476,6 +535,26 @@ final class LibArchiveLibrary: @unchecked Sendable {
 
     func archiveReadSupportFormat7Zip(_ archive: OpaquePointer) -> Int32 {
         readSupportFormat7Zip?(archive) ?? -1
+    }
+
+    func archiveReadSupportFormatRar(_ archive: OpaquePointer) -> Int32 {
+        readSupportFormatRar?(archive) ?? -1
+    }
+
+    func archiveReadSupportFormatRar5(_ archive: OpaquePointer) -> Int32 {
+        readSupportFormatRar5?(archive) ?? -1
+    }
+
+    func archiveReadSupportFormatXar(_ archive: OpaquePointer) -> Int32 {
+        readSupportFormatXar?(archive) ?? -1
+    }
+
+    func archiveReadSupportFormatCpio(_ archive: OpaquePointer) -> Int32 {
+        readSupportFormatCpio?(archive) ?? -1
+    }
+
+    func archiveReadSupportFormatCab(_ archive: OpaquePointer) -> Int32 {
+        readSupportFormatCab?(archive) ?? -1
     }
 
     func archiveReadOpenFilename(_ archive: OpaquePointer, _ path: UnsafePointer<CChar>, _ blockSize: Int) -> Int32 {
